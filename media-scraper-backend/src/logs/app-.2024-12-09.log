@@ -1,0 +1,481 @@
+[2024-12-09T00:04:52.651] [INFO] default - [2024-12-08T17:04:52.650Z] GET /api/urls?page=1&limit=15
+[2024-12-09T00:04:53.657] [INFO] default - Response status: 304
+[2024-12-09T00:04:55.181] [INFO] default - [2024-12-08T17:04:55.181Z] POST /api/scrape
+[2024-12-09T00:09:01.458] [INFO] default - Response status: 200
+[2024-12-09T00:17:39.320] [INFO] default - [2024-12-08T17:17:39.319Z] POST /api/scrape
+[2024-12-09T00:18:46.894] [INFO] default - Response status: 200
+[2024-12-09T00:18:50.753] [INFO] default - [2024-12-08T17:18:50.753Z] GET /api/urls/1
+[2024-12-09T00:18:51.701] [INFO] default - Response status: 200
+[2024-12-09T00:18:51.713] [INFO] default - [2024-12-08T17:18:51.713Z] GET /api/urls/1
+[2024-12-09T00:18:51.775] [INFO] default - Response status: 304
+[2024-12-09T00:18:55.812] [INFO] default - [2024-12-08T17:18:55.812Z] GET /api/urls?page=1&limit=15
+[2024-12-09T00:18:55.953] [INFO] default - Response status: 304
+[2024-12-09T00:19:38.297] [INFO] default - [2024-12-08T17:19:38.297Z] POST /api/scrape
+[2024-12-09T00:29:51.621] [INFO] default - Response status: 200
+[2024-12-09T00:33:47.459] [INFO] default - [2024-12-08T17:33:47.457Z] POST /api/scrape
+[2024-12-09T00:34:25.875] [ERROR] default - Error during scraping:  Error [ReferenceError]: URL_scrape is not defined
+pptr:evaluate;scrapeURLs%20(C%3A%5CUsers%5CKe%20Hien%20Le%5CDesktop%5CMedia%20Scraper%5Cmedia-scraper-backend%5Csrc%5Ccontrollers%5CscapeController.js%3A73%3A36):9:9
+    at evaluate (evaluate at scrapeURLs (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\src\controllers\scapeController.js:73:36), <anonymous>:8:8)
+    at evaluate (evaluate at scrapeURLs (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\src\controllers\scapeController.js:73:36), <anonymous>:4:19)
+    at #evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\ExecutionContext.js:391:56)
+    at async ExecutionContext.evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\ExecutionContext.js:278:16)
+    at async IsolatedWorld.evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\IsolatedWorld.js:100:16)
+    at async CdpFrame.evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:348:20)
+    at async CdpPage.evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:812:20)
+    at async scrapeURLs (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\src\controllers\scapeController.js:73:25)
+[2024-12-09T00:34:25.925] [INFO] default - Response status: 200
+[2024-12-09T00:35:36.427] [INFO] default - [2024-12-08T17:35:36.424Z] GET /api/urls?page=1&limit=15
+[2024-12-09T00:35:37.374] [INFO] default - Response status: 304
+[2024-12-09T00:35:51.329] [INFO] default - [2024-12-08T17:35:51.329Z] POST /api/scrape
+[2024-12-09T00:37:30.495] [ERROR] default - Error during scraping:  Error [ReferenceError]: o is not defined
+pptr:evaluate;scrapeURLs%20(C%3A%5CUsers%5CKe%20Hien%20Le%5CDesktop%5CMedia%20Scraper%5Cmedia-scraper-backend%5Csrc%5Ccontrollers%5CscapeController.js%3A39%3A36):22:63
+    at evaluate (evaluate at scrapeURLs (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\src\controllers\scapeController.js:39:36), <anonymous>:21:62)
+    at evaluate (evaluate at scrapeURLs (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\src\controllers\scapeController.js:39:36), <anonymous>:11:19)
+    at #evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\ExecutionContext.js:391:56)
+    at async ExecutionContext.evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\ExecutionContext.js:278:16)
+    at async IsolatedWorld.evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\IsolatedWorld.js:100:16)
+    at async CdpFrame.evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:348:20)
+    at async CdpPage.evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:812:20)
+    at async scrapeURLs (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\src\controllers\scapeController.js:39:25)
+[2024-12-09T00:37:30.556] [INFO] default - Response status: 200
+[2024-12-09T00:39:12.918] [INFO] default - [2024-12-08T17:39:12.918Z] POST /api/scrape
+[2024-12-09T00:40:47.785] [INFO] default - Response status: 200
+[2024-12-09T00:42:16.228] [ERROR] default - Error occurred while creating media items:  Error
+    at Query.run (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.bulkInsert (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\sequelize\lib\dialects\abstract\query-interface.js:346:21)
+    at async recursiveBulkCreate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\sequelize\lib\model.js:1697:25)
+    at async Media.bulkCreate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\sequelize\lib\model.js:1786:12) {
+  name: 'SequelizeDatabaseError',
+  parent: error: null value in column "urlId" of relation "media" violates not-null constraint
+      at Parser.parseErrorMessage (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\pg-protocol\dist\parser.js:283:98)
+      at Parser.handlePacket (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\pg-protocol\dist\parser.js:122:29)
+      at Parser.parse (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\pg-protocol\dist\parser.js:35:38)
+      at TLSSocket.<anonymous> (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at TLSSocket.emit (node:events:517:28)
+      at addChunk (node:internal/streams/readable:368:12)
+      at readableAddChunk (node:internal/streams/readable:341:9)
+      at Readable.push (node:internal/streams/readable:278:10)
+      at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+      at TLSWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+    length: 303,
+    severity: 'ERROR',
+    code: '23502',
+    detail: 'Failing row contains (1, image, https://www.youtube.com/watch?v=sgJlE0utgHU, null, 2024-12-08 17:39:40.154+00, 2024-12-08 17:39:40.154+00).',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'media',
+    column: 'urlId',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'execMain.c',
+    line: '2003',
+    routine: 'ExecConstraints',
+    sql: `INSERT INTO "media" ("id","type","url","createdAt","updatedAt") VALUES (DEFAULT,'image','https://www.youtube.com/watch?v=sgJlE0utgHU','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00'),(DEFAULT,'image','https://www.youtube.com/watch?v=sgJlE0utgHU','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00'),(DEFAULT,'video','blob:https://www.youtube.com/4f266142-a076-4c56-ad99-1dab55b42d08','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00'),(DEFAULT,'image','https://i.ytimg.com/an/iqQwuijxf4HgfPlp7uBIEw/featured_channel.jpg?v=60c09073','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00'),(DEFAULT,'image','https://yt3.ggpht.com/uDzB8m_bdly423CfneDI-OxClVuj4d7xZ_0LcXwQAcecDTUO25kp558Dr65UlDq9W9jjGK6gGu0=s48-c-k-c0x00ffffff-no-rj','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00') RETURNING "id","type","url","urlId","createdAt","updatedAt";`,
+    parameters: undefined
+  },
+  original: error: null value in column "urlId" of relation "media" violates not-null constraint
+      at Parser.parseErrorMessage (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\pg-protocol\dist\parser.js:283:98)
+      at Parser.handlePacket (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\pg-protocol\dist\parser.js:122:29)
+      at Parser.parse (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\pg-protocol\dist\parser.js:35:38)
+      at TLSSocket.<anonymous> (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at TLSSocket.emit (node:events:517:28)
+      at addChunk (node:internal/streams/readable:368:12)
+      at readableAddChunk (node:internal/streams/readable:341:9)
+      at Readable.push (node:internal/streams/readable:278:10)
+      at TLSWrap.onStreamRead (node:internal/stream_base_commons:190:23)
+      at TLSWrap.callbackTrampoline (node:internal/async_hooks:128:17) {
+    length: 303,
+    severity: 'ERROR',
+    code: '23502',
+    detail: 'Failing row contains (1, image, https://www.youtube.com/watch?v=sgJlE0utgHU, null, 2024-12-08 17:39:40.154+00, 2024-12-08 17:39:40.154+00).',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'media',
+    column: 'urlId',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'execMain.c',
+    line: '2003',
+    routine: 'ExecConstraints',
+    sql: `INSERT INTO "media" ("id","type","url","createdAt","updatedAt") VALUES (DEFAULT,'image','https://www.youtube.com/watch?v=sgJlE0utgHU','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00'),(DEFAULT,'image','https://www.youtube.com/watch?v=sgJlE0utgHU','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00'),(DEFAULT,'video','blob:https://www.youtube.com/4f266142-a076-4c56-ad99-1dab55b42d08','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00'),(DEFAULT,'image','https://i.ytimg.com/an/iqQwuijxf4HgfPlp7uBIEw/featured_channel.jpg?v=60c09073','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00'),(DEFAULT,'image','https://yt3.ggpht.com/uDzB8m_bdly423CfneDI-OxClVuj4d7xZ_0LcXwQAcecDTUO25kp558Dr65UlDq9W9jjGK6gGu0=s48-c-k-c0x00ffffff-no-rj','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00') RETURNING "id","type","url","urlId","createdAt","updatedAt";`,
+    parameters: undefined
+  },
+  sql: `INSERT INTO "media" ("id","type","url","createdAt","updatedAt") VALUES (DEFAULT,'image','https://www.youtube.com/watch?v=sgJlE0utgHU','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00'),(DEFAULT,'image','https://www.youtube.com/watch?v=sgJlE0utgHU','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00'),(DEFAULT,'video','blob:https://www.youtube.com/4f266142-a076-4c56-ad99-1dab55b42d08','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00'),(DEFAULT,'image','https://i.ytimg.com/an/iqQwuijxf4HgfPlp7uBIEw/featured_channel.jpg?v=60c09073','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00'),(DEFAULT,'image','https://yt3.ggpht.com/uDzB8m_bdly423CfneDI-OxClVuj4d7xZ_0LcXwQAcecDTUO25kp558Dr65UlDq9W9jjGK6gGu0=s48-c-k-c0x00ffffff-no-rj','2024-12-08 17:39:40.154 +00:00','2024-12-08 17:39:40.154 +00:00') RETURNING "id","type","url","urlId","createdAt","updatedAt";`,
+  parameters: {}
+}
+[2024-12-09T00:44:59.002] [INFO] default - [2024-12-08T17:44:59.002Z] POST /api/scrape
+[2024-12-09T00:45:43.865] [ERROR] default - Error during scraping:  Error [ReferenceError]: newScrapedURL is not defined
+    at evaluate (evaluate at scrapeURLs (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\src\controllers\scapeController.js:38:36), <anonymous>:2:11)
+    at #evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\ExecutionContext.js:391:56)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\ExecutionContext.js:278:16)
+    at async IsolatedWorld.evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\IsolatedWorld.js:100:16)
+    at async CdpFrame.evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:348:20)
+    at async CdpPage.evaluate (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:812:20)
+    at async scrapeURLs (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\src\controllers\scapeController.js:38:25)
+[2024-12-09T00:46:05.571] [INFO] default - Response status: 200
+[2024-12-09T00:54:12.999] [INFO] default - [2024-12-08T17:54:12.999Z] POST /api/scrape
+[2024-12-09T00:55:13.820] [INFO] default - Response status: 200
+[2024-12-09T00:55:22.103] [INFO] default - [2024-12-08T17:55:22.103Z] GET /api/urls?page=1&limit=15
+[2024-12-09T00:55:22.382] [INFO] default - Response status: 200
+[2024-12-09T00:55:29.120] [INFO] default - [2024-12-08T17:55:29.120Z] GET /api/urls?page=1&limit=15
+[2024-12-09T00:55:29.172] [INFO] default - Response status: 304
+[2024-12-09T00:55:33.918] [INFO] default - [2024-12-08T17:55:33.918Z] GET /api/urls?page=1&limit=15
+[2024-12-09T00:55:34.005] [INFO] default - Response status: 304
+[2024-12-09T00:55:34.065] [INFO] default - [2024-12-08T17:55:34.065Z] GET /api/urls?page=1&limit=15
+[2024-12-09T00:55:34.146] [INFO] default - Response status: 304
+[2024-12-09T00:55:40.609] [INFO] default - [2024-12-08T17:55:40.609Z] GET /api/urls/2
+[2024-12-09T00:55:40.671] [INFO] default - Response status: 200
+[2024-12-09T00:55:40.677] [INFO] default - [2024-12-08T17:55:40.677Z] GET /api/urls/2
+[2024-12-09T00:55:40.736] [INFO] default - Response status: 304
+[2024-12-09T00:58:21.759] [INFO] default - [2024-12-08T17:58:21.758Z] GET /api/urls?page=1&limit=15
+[2024-12-09T00:58:23.558] [INFO] default - Response status: 304
+[2024-12-09T00:58:23.573] [INFO] default - [2024-12-08T17:58:23.573Z] GET /api/urls?page=1&limit=15
+[2024-12-09T00:58:23.796] [INFO] default - Response status: 304
+[2024-12-09T00:58:27.652] [INFO] default - [2024-12-08T17:58:27.652Z] GET /api/urls/2
+[2024-12-09T00:58:27.713] [INFO] default - Response status: 304
+[2024-12-09T00:58:27.720] [INFO] default - [2024-12-08T17:58:27.720Z] GET /api/urls/2
+[2024-12-09T00:58:27.798] [INFO] default - Response status: 304
+[2024-12-09T00:59:41.132] [INFO] default - [2024-12-08T17:59:41.132Z] POST /api/scrape
+[2024-12-09T01:00:23.023] [INFO] default - Response status: 200
+[2024-12-09T01:00:56.164] [INFO] default - [2024-12-08T18:00:56.164Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:00:58.096] [INFO] default - Response status: 200
+[2024-12-09T01:00:58.106] [INFO] default - [2024-12-08T18:00:58.106Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:00:58.190] [INFO] default - Response status: 304
+[2024-12-09T01:01:09.306] [INFO] default - [2024-12-08T18:01:09.306Z] GET /api/urls/3
+[2024-12-09T01:01:10.004] [INFO] default - Response status: 200
+[2024-12-09T01:01:10.009] [INFO] default - [2024-12-08T18:01:10.009Z] GET /api/urls/3
+[2024-12-09T01:01:10.071] [INFO] default - Response status: 304
+[2024-12-09T01:05:50.047] [INFO] default - [2024-12-08T18:05:50.046Z] POST /api/scrape
+[2024-12-09T01:06:24.439] [INFO] default - Response status: 200
+[2024-12-09T01:06:28.743] [INFO] default - [2024-12-08T18:06:28.743Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:06:29.146] [INFO] default - Response status: 304
+[2024-12-09T01:06:34.359] [INFO] default - [2024-12-08T18:06:34.359Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:06:34.428] [INFO] default - Response status: 304
+[2024-12-09T01:06:34.436] [INFO] default - [2024-12-08T18:06:34.436Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:06:34.531] [INFO] default - Response status: 304
+[2024-12-09T01:06:38.437] [INFO] default - [2024-12-08T18:06:38.437Z] GET /api/urls/3
+[2024-12-09T01:06:38.553] [INFO] default - Response status: 200
+[2024-12-09T01:06:38.564] [INFO] default - [2024-12-08T18:06:38.564Z] GET /api/urls/3
+[2024-12-09T01:06:38.686] [INFO] default - Response status: 304
+[2024-12-09T01:07:45.110] [INFO] default - [2024-12-08T18:07:45.106Z] POST /api/scrape
+[2024-12-09T01:08:17.345] [INFO] default - Response status: 200
+[2024-12-09T01:08:33.136] [INFO] default - [2024-12-08T18:08:33.136Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:08:34.160] [INFO] default - Response status: 304
+[2024-12-09T01:08:53.550] [INFO] default - [2024-12-08T18:08:53.550Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:08:54.357] [INFO] default - Response status: 304
+[2024-12-09T01:08:54.363] [INFO] default - [2024-12-08T18:08:54.363Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:08:54.477] [INFO] default - Response status: 304
+[2024-12-09T01:09:12.997] [INFO] default - [2024-12-08T18:09:12.997Z] GET /api/urls/3
+[2024-12-09T01:09:14.255] [INFO] default - Response status: 304
+[2024-12-09T01:09:14.272] [INFO] default - [2024-12-08T18:09:14.272Z] GET /api/urls/3
+[2024-12-09T01:09:14.351] [INFO] default - Response status: 304
+[2024-12-09T01:09:32.963] [INFO] default - [2024-12-08T18:09:32.963Z] POST /api/scrape
+[2024-12-09T01:10:02.370] [INFO] default - Response status: 200
+[2024-12-09T01:10:13.155] [INFO] default - [2024-12-08T18:10:13.154Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:10:13.267] [INFO] default - Response status: 304
+[2024-12-09T01:11:33.631] [INFO] default - [2024-12-08T18:11:33.629Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:11:34.621] [INFO] default - Response status: 304
+[2024-12-09T01:11:34.653] [INFO] default - [2024-12-08T18:11:34.650Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:11:34.770] [INFO] default - Response status: 304
+[2024-12-09T01:12:10.961] [INFO] default - [2024-12-08T18:12:10.928Z] GET /api/urls/102
+[2024-12-09T01:12:12.977] [INFO] default - Response status: 200
+[2024-12-09T01:12:13.019] [INFO] default - [2024-12-08T18:12:13.019Z] GET /api/urls/102
+[2024-12-09T01:12:13.114] [INFO] default - Response status: 304
+[2024-12-09T01:19:01.711] [INFO] default - [2024-12-08T18:19:01.700Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:19:04.397] [INFO] default - Response status: 304
+[2024-12-09T01:19:04.414] [INFO] default - [2024-12-08T18:19:04.414Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:19:04.631] [INFO] default - Response status: 304
+[2024-12-09T01:19:10.181] [INFO] default - [2024-12-08T18:19:10.180Z] GET /api/urls/104
+[2024-12-09T01:19:10.333] [INFO] default - Response status: 200
+[2024-12-09T01:19:10.443] [INFO] default - [2024-12-08T18:19:10.443Z] GET /api/urls/104
+[2024-12-09T01:19:10.510] [INFO] default - Response status: 304
+[2024-12-09T01:19:13.519] [INFO] default - [2024-12-08T18:19:13.519Z] GET /api/urls/105
+[2024-12-09T01:19:13.582] [INFO] default - Response status: 200
+[2024-12-09T01:19:17.136] [INFO] default - [2024-12-08T18:19:17.135Z] GET /api/urls/1
+[2024-12-09T01:19:17.187] [INFO] default - Response status: 304
+[2024-12-09T01:19:21.190] [INFO] default - [2024-12-08T18:19:21.190Z] GET /api/urls/3
+[2024-12-09T01:19:21.289] [INFO] default - Response status: 304
+[2024-12-09T01:19:26.872] [INFO] default - [2024-12-08T18:19:26.872Z] GET /api/urls/102
+[2024-12-09T01:19:26.923] [INFO] default - Response status: 304
+[2024-12-09T01:19:28.086] [INFO] default - [2024-12-08T18:19:28.086Z] GET /api/urls/103
+[2024-12-09T01:19:28.137] [INFO] default - Response status: 200
+[2024-12-09T01:19:29.700] [INFO] default - [2024-12-08T18:19:29.700Z] GET /api/urls/104
+[2024-12-09T01:19:29.764] [INFO] default - Response status: 304
+[2024-12-09T01:19:31.671] [INFO] default - [2024-12-08T18:19:31.671Z] GET /api/urls/1
+[2024-12-09T01:19:31.720] [INFO] default - Response status: 304
+[2024-12-09T01:19:32.902] [INFO] default - [2024-12-08T18:19:32.902Z] GET /api/urls/2
+[2024-12-09T01:19:32.955] [INFO] default - Response status: 200
+[2024-12-09T01:19:33.906] [INFO] default - [2024-12-08T18:19:33.906Z] GET /api/urls/3
+[2024-12-09T01:19:34.022] [INFO] default - Response status: 304
+[2024-12-09T01:19:45.340] [INFO] default - [2024-12-08T18:19:45.340Z] GET /api/urls/2
+[2024-12-09T01:19:45.845] [INFO] default - [2024-12-08T18:19:45.845Z] GET /api/urls/1
+[2024-12-09T01:19:46.104] [INFO] default - Response status: 304
+[2024-12-09T01:19:46.157] [INFO] default - Response status: 304
+[2024-12-09T01:19:46.448] [INFO] default - [2024-12-08T18:19:46.448Z] GET /api/urls/104
+[2024-12-09T01:19:46.512] [INFO] default - Response status: 304
+[2024-12-09T01:19:47.961] [INFO] default - [2024-12-08T18:19:47.961Z] GET /api/urls/103
+[2024-12-09T01:19:48.011] [INFO] default - Response status: 304
+[2024-12-09T01:19:48.526] [INFO] default - [2024-12-08T18:19:48.526Z] GET /api/urls/102
+[2024-12-09T01:19:48.579] [INFO] default - Response status: 304
+[2024-12-09T01:19:51.705] [INFO] default - [2024-12-08T18:19:51.705Z] GET /api/urls/3
+[2024-12-09T01:19:51.811] [INFO] default - Response status: 304
+[2024-12-09T01:19:52.258] [INFO] default - [2024-12-08T18:19:52.258Z] GET /api/urls/2
+[2024-12-09T01:19:52.308] [INFO] default - Response status: 304
+[2024-12-09T01:19:55.209] [INFO] default - [2024-12-08T18:19:55.209Z] GET /api/urls/103
+[2024-12-09T01:19:55.258] [INFO] default - Response status: 304
+[2024-12-09T01:19:56.306] [INFO] default - [2024-12-08T18:19:56.306Z] GET /api/urls/102
+[2024-12-09T01:19:56.358] [INFO] default - Response status: 304
+[2024-12-09T01:19:57.107] [INFO] default - [2024-12-08T18:19:57.107Z] GET /api/urls/103
+[2024-12-09T01:19:57.158] [INFO] default - Response status: 304
+[2024-12-09T01:19:58.464] [INFO] default - [2024-12-08T18:19:58.464Z] GET /api/urls/102
+[2024-12-09T01:19:58.517] [INFO] default - Response status: 304
+[2024-12-09T01:20:07.497] [INFO] default - [2024-12-08T18:20:07.497Z] POST /api/scrape
+[2024-12-09T01:20:46.449] [INFO] default - Response status: 200
+[2024-12-09T01:25:02.490] [INFO] default - [2024-12-08T18:25:02.487Z] POST /api/scrape
+[2024-12-09T01:25:31.975] [INFO] default - Response status: 200
+[2024-12-09T01:25:43.599] [INFO] default - [2024-12-08T18:25:43.599Z] GET /api/urls/4
+[2024-12-09T01:25:43.762] [INFO] default - Response status: 200
+[2024-12-09T01:32:00.832] [INFO] default - [2024-12-08T18:32:00.812Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:32:05.167] [INFO] default - Response status: 200
+[2024-12-09T01:32:05.199] [INFO] default - [2024-12-08T18:32:05.199Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:32:05.293] [INFO] default - Response status: 304
+[2024-12-09T01:32:32.129] [INFO] default - [2024-12-08T18:32:32.128Z] GET /api/urls/4
+[2024-12-09T01:32:32.858] [INFO] default - Response status: 304
+[2024-12-09T01:32:32.861] [INFO] default - [2024-12-08T18:32:32.861Z] GET /api/urls/4
+[2024-12-09T01:32:32.919] [INFO] default - Response status: 304
+[2024-12-09T01:33:12.149] [INFO] default - [2024-12-08T18:33:12.149Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:33:13.115] [INFO] default - Response status: 304
+[2024-12-09T01:33:13.122] [INFO] default - [2024-12-08T18:33:13.122Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:33:13.242] [INFO] default - Response status: 304
+[2024-12-09T01:33:22.442] [INFO] default - [2024-12-08T18:33:22.441Z] GET /api/urls/4
+[2024-12-09T01:33:23.763] [INFO] default - Response status: 304
+[2024-12-09T01:33:24.227] [INFO] default - [2024-12-08T18:33:24.227Z] GET /api/urls/4
+[2024-12-09T01:33:24.616] [INFO] default - Response status: 304
+[2024-12-09T01:35:49.491] [INFO] default - [2024-12-08T18:35:49.486Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:35:51.052] [INFO] default - Response status: 304
+[2024-12-09T01:35:51.068] [INFO] default - [2024-12-08T18:35:51.068Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:35:51.148] [INFO] default - Response status: 304
+[2024-12-09T01:36:00.752] [INFO] default - [2024-12-08T18:36:00.751Z] GET /api/urls/4
+[2024-12-09T01:36:00.865] [INFO] default - Response status: 304
+[2024-12-09T01:36:00.869] [INFO] default - [2024-12-08T18:36:00.868Z] GET /api/urls/4
+[2024-12-09T01:36:01.247] [INFO] default - Response status: 304
+[2024-12-09T01:38:35.755] [INFO] default - [2024-12-08T18:38:35.747Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:38:37.605] [INFO] default - Response status: 304
+[2024-12-09T01:38:37.667] [INFO] default - [2024-12-08T18:38:37.667Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:38:37.850] [INFO] default - Response status: 304
+[2024-12-09T01:38:41.832] [INFO] default - [2024-12-08T18:38:41.832Z] GET /api/urls/4
+[2024-12-09T01:38:41.957] [INFO] default - Response status: 304
+[2024-12-09T01:38:41.961] [INFO] default - [2024-12-08T18:38:41.961Z] GET /api/urls/4
+[2024-12-09T01:38:42.037] [INFO] default - Response status: 304
+[2024-12-09T01:40:03.492] [INFO] default - [2024-12-08T18:40:03.492Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:40:04.361] [INFO] default - Response status: 304
+[2024-12-09T01:40:04.367] [INFO] default - [2024-12-08T18:40:04.366Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:40:04.499] [INFO] default - Response status: 304
+[2024-12-09T01:40:11.073] [INFO] default - [2024-12-08T18:40:11.073Z] GET /api/urls/4
+[2024-12-09T01:40:11.257] [INFO] default - Response status: 304
+[2024-12-09T01:40:11.261] [INFO] default - [2024-12-08T18:40:11.261Z] GET /api/urls/4
+[2024-12-09T01:40:11.321] [INFO] default - Response status: 304
+[2024-12-09T01:40:25.768] [INFO] default - [2024-12-08T18:40:25.768Z] GET /api/urls/3
+[2024-12-09T01:40:26.530] [INFO] default - Response status: 304
+[2024-12-09T01:40:48.979] [INFO] default - [2024-12-08T18:40:48.979Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:40:49.799] [INFO] default - Response status: 304
+[2024-12-09T01:40:49.804] [INFO] default - [2024-12-08T18:40:49.804Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:40:49.889] [INFO] default - Response status: 304
+[2024-12-09T01:41:06.531] [INFO] default - [2024-12-08T18:41:06.531Z] GET /api/urls/2
+[2024-12-09T01:41:08.236] [INFO] default - Response status: 304
+[2024-12-09T01:41:08.238] [INFO] default - [2024-12-08T18:41:08.238Z] GET /api/urls/2
+[2024-12-09T01:41:08.284] [INFO] default - Response status: 304
+[2024-12-09T01:41:25.992] [INFO] default - [2024-12-08T18:41:25.992Z] GET /api/urls/3
+[2024-12-09T01:41:26.709] [INFO] default - Response status: 304
+[2024-12-09T01:41:30.509] [INFO] default - [2024-12-08T18:41:30.509Z] GET /api/urls/105
+[2024-12-09T01:41:30.558] [INFO] default - Response status: 304
+[2024-12-09T01:41:35.253] [INFO] default - [2024-12-08T18:41:35.253Z] GET /api/urls/1
+[2024-12-09T01:41:35.302] [INFO] default - Response status: 304
+[2024-12-09T01:41:39.046] [INFO] default - [2024-12-08T18:41:39.046Z] GET /api/urls/4
+[2024-12-09T01:41:39.141] [INFO] default - Response status: 304
+[2024-12-09T01:42:46.842] [INFO] default - [2024-12-08T18:42:46.842Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:42:47.727] [INFO] default - Response status: 304
+[2024-12-09T01:42:47.734] [INFO] default - [2024-12-08T18:42:47.734Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:42:47.846] [INFO] default - Response status: 304
+[2024-12-09T01:42:51.303] [INFO] default - [2024-12-08T18:42:51.303Z] GET /api/urls/4
+[2024-12-09T01:42:51.409] [INFO] default - Response status: 304
+[2024-12-09T01:42:51.557] [INFO] default - [2024-12-08T18:42:51.557Z] GET /api/urls/4
+[2024-12-09T01:42:51.617] [INFO] default - Response status: 304
+[2024-12-09T01:43:00.219] [INFO] default - [2024-12-08T18:43:00.219Z] GET /api/urls/3
+[2024-12-09T01:43:00.336] [INFO] default - Response status: 304
+[2024-12-09T01:43:05.561] [INFO] default - [2024-12-08T18:43:05.561Z] GET /api/urls/104
+[2024-12-09T01:43:05.645] [INFO] default - Response status: 304
+[2024-12-09T01:44:07.881] [INFO] default - [2024-12-08T18:44:07.879Z] POST /api/scrape
+[2024-12-09T01:44:15.758] [INFO] default - Response status: 200
+[2024-12-09T01:44:17.338] [INFO] default - [2024-12-08T18:44:17.338Z] GET /api/urls/5
+[2024-12-09T01:44:17.416] [INFO] default - Response status: 200
+[2024-12-09T01:45:00.660] [INFO] default - [2024-12-08T18:45:00.660Z] POST /api/scrape
+[2024-12-09T01:45:18.094] [INFO] default - Response status: 200
+[2024-12-09T01:45:20.701] [INFO] default - [2024-12-08T18:45:20.701Z] GET /api/urls/6
+[2024-12-09T01:45:20.877] [INFO] default - Response status: 200
+[2024-12-09T01:46:55.696] [INFO] default - [2024-12-08T18:46:55.694Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:46:56.863] [INFO] default - Response status: 200
+[2024-12-09T01:46:56.871] [INFO] default - [2024-12-08T18:46:56.871Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:46:57.005] [INFO] default - Response status: 304
+[2024-12-09T01:47:05.308] [INFO] default - [2024-12-08T18:47:05.308Z] GET /api/urls/6
+[2024-12-09T01:47:05.867] [INFO] default - Response status: 304
+[2024-12-09T01:47:06.107] [INFO] default - [2024-12-08T18:47:06.107Z] GET /api/urls/6
+[2024-12-09T01:47:06.259] [INFO] default - Response status: 304
+[2024-12-09T01:51:56.913] [INFO] default - [2024-12-08T18:51:56.906Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:51:58.303] [INFO] default - Response status: 304
+[2024-12-09T01:51:58.319] [INFO] default - [2024-12-08T18:51:58.319Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:51:58.447] [INFO] default - Response status: 304
+[2024-12-09T01:52:05.322] [INFO] default - [2024-12-08T18:52:05.322Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:52:05.397] [INFO] default - Response status: 304
+[2024-12-09T01:52:05.406] [INFO] default - [2024-12-08T18:52:05.406Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:52:05.484] [INFO] default - Response status: 304
+[2024-12-09T01:52:09.364] [INFO] default - [2024-12-08T18:52:09.364Z] GET /api/urls/6
+[2024-12-09T01:52:09.807] [INFO] default - Response status: 304
+[2024-12-09T01:52:09.815] [INFO] default - [2024-12-08T18:52:09.815Z] GET /api/urls/6
+[2024-12-09T01:52:09.927] [INFO] default - Response status: 304
+[2024-12-09T01:52:46.608] [INFO] default - [2024-12-08T18:52:46.608Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:52:47.343] [INFO] default - Response status: 304
+[2024-12-09T01:52:47.351] [INFO] default - [2024-12-08T18:52:47.350Z] GET /api/urls?page=1&limit=15
+[2024-12-09T01:52:47.419] [INFO] default - Response status: 304
+[2024-12-09T01:52:55.925] [INFO] default - [2024-12-08T18:52:55.925Z] GET /api/urls/6
+[2024-12-09T01:52:56.069] [INFO] default - Response status: 304
+[2024-12-09T01:52:56.072] [INFO] default - [2024-12-08T18:52:56.072Z] GET /api/urls/6
+[2024-12-09T01:52:56.143] [INFO] default - Response status: 304
+[2024-12-09T01:53:25.815] [INFO] default - [2024-12-08T18:53:25.815Z] GET /api/urls/104
+[2024-12-09T01:53:26.546] [INFO] default - Response status: 304
+[2024-12-09T01:53:31.603] [INFO] default - [2024-12-08T18:53:31.603Z] GET /api/urls/103
+[2024-12-09T01:53:31.656] [INFO] default - Response status: 304
+[2024-12-09T01:53:33.615] [INFO] default - [2024-12-08T18:53:33.615Z] GET /api/urls/1
+[2024-12-09T01:53:33.663] [INFO] default - Response status: 304
+[2024-12-09T01:53:34.423] [INFO] default - [2024-12-08T18:53:34.423Z] GET /api/urls/4
+[2024-12-09T01:53:34.510] [INFO] default - Response status: 304
+[2024-12-09T02:03:28.280] [INFO] default - [2024-12-08T19:03:28.277Z] POST /api/scrape
+[2024-12-09T02:03:59.982] [INFO] default - Response status: 200
+[2024-12-09T02:04:07.598] [INFO] default - [2024-12-08T19:04:07.598Z] GET /api/urls/7
+[2024-12-09T02:04:08.669] [INFO] default - Response status: 200
+[2024-12-09T02:04:14.059] [INFO] default - [2024-12-08T19:04:14.059Z] GET /api/urls/6
+[2024-12-09T02:04:14.193] [INFO] default - Response status: 304
+[2024-12-09T02:04:16.549] [INFO] default - [2024-12-08T19:04:16.549Z] GET /api/urls/7
+[2024-12-09T02:04:16.595] [INFO] default - Response status: 304
+[2024-12-09T02:04:30.437] [INFO] default - [2024-12-08T19:04:30.437Z] GET /api/urls?page=1&limit=15
+[2024-12-09T02:04:31.327] [INFO] default - Response status: 200
+[2024-12-09T02:04:31.343] [INFO] default - [2024-12-08T19:04:31.343Z] GET /api/urls?page=1&limit=15
+[2024-12-09T02:04:31.429] [INFO] default - Response status: 304
+[2024-12-09T02:04:35.104] [INFO] default - [2024-12-08T19:04:35.103Z] GET /api/urls/7
+[2024-12-09T02:04:35.163] [INFO] default - Response status: 304
+[2024-12-09T02:04:35.170] [INFO] default - [2024-12-08T19:04:35.170Z] GET /api/urls/7
+[2024-12-09T02:04:35.230] [INFO] default - Response status: 304
+[2024-12-09T02:04:57.317] [INFO] default - [2024-12-08T19:04:57.317Z] POST /api/scrape
+[2024-12-09T02:05:05.427] [INFO] default - Response status: 200
+[2024-12-09T02:05:09.001] [INFO] default - [2024-12-08T19:05:09.000Z] GET /api/urls?page=1&limit=15
+[2024-12-09T02:05:09.757] [INFO] default - Response status: 304
+[2024-12-09T02:05:41.770] [INFO] default - [2024-12-08T19:05:41.770Z] POST /api/scrape
+[2024-12-09T02:06:04.034] [INFO] default - Response status: 200
+[2024-12-09T02:07:23.035] [INFO] default - [2024-12-08T19:07:23.034Z] POST /api/scrape
+[2024-12-09T02:07:56.536] [INFO] default - Response status: 200
+[2024-12-09T02:08:00.536] [INFO] default - [2024-12-08T19:08:00.536Z] POST /api/scrape
+[2024-12-09T02:08:03.711] [INFO] default - [2024-12-08T19:08:03.710Z] GET /api/urls?page=1&limit=15
+[2024-12-09T02:08:03.903] [INFO] default - Response status: 304
+[2024-12-09T02:08:34.797] [INFO] default - Response status: 200
+[2024-12-09T02:08:45.890] [INFO] default - [2024-12-08T19:08:45.889Z] GET /api/urls/7
+[2024-12-09T02:08:49.137] [INFO] default - Response status: 304
+[2024-12-09T02:08:49.155] [INFO] default - [2024-12-08T19:08:49.155Z] GET /api/urls/7
+[2024-12-09T02:08:49.216] [INFO] default - Response status: 304
+[2024-12-09T02:10:18.994] [INFO] default - [2024-12-08T19:10:18.993Z] POST /api/scrape
+[2024-12-09T02:11:29.317] [ERROR] default - Error during scraping:  ReferenceError: faMedia is not defined
+    at scrapeURLs (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\src\controllers\scapeController.js:71:4)
+[2024-12-09T02:11:29.462] [INFO] default - Response status: 200
+[2024-12-09T02:12:47.172] [INFO] default - [2024-12-08T19:12:47.171Z] POST /api/scrape
+[2024-12-09T02:13:26.198] [INFO] default - Response status: 200
+[2024-12-09T02:13:33.470] [INFO] default - [2024-12-08T19:13:33.470Z] GET /api/urls/8
+[2024-12-09T02:13:33.544] [INFO] default - Response status: 200
+[2024-12-09T02:14:57.964] [INFO] default - [2024-12-08T19:14:57.959Z] POST /api/scrape
+[2024-12-09T02:15:55.725] [ERROR] default - Error during scraping:  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at new Deferred (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\util\Deferred.js:60:34)
+    at Deferred.create (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\util\Deferred.js:21:16)
+    at new LifecycleWatcher (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\LifecycleWatcher.js:69:60)
+    at CdpFrame.goto (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Frame.js:149:29)
+    at CdpFrame.<anonymous> (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\util\decorators.js:109:27)
+    at CdpPage.goto (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:574:43)
+    at scrapeURLs (C:\Users\Ke Hien Le\Desktop\Media Scraper\media-scraper-backend\src\controllers\scapeController.js:35:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-12-09T02:15:56.344] [INFO] default - Response status: 200
+[2024-12-09T03:16:55.964] [INFO] default - [2024-12-08T20:16:55.951Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:16:56.150] [INFO] default - Response status: 401
+[2024-12-09T03:16:56.176] [INFO] default - [2024-12-08T20:16:56.176Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:16:56.187] [INFO] default - Response status: 401
+[2024-12-09T03:16:58.810] [INFO] default - [2024-12-08T20:16:58.810Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:16:58.813] [INFO] default - Response status: 401
+[2024-12-09T03:16:59.632] [INFO] default - [2024-12-08T20:16:59.632Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:16:59.634] [INFO] default - Response status: 401
+[2024-12-09T03:17:00.193] [INFO] default - [2024-12-08T20:17:00.193Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:00.201] [INFO] default - Response status: 401
+[2024-12-09T03:17:00.328] [INFO] default - [2024-12-08T20:17:00.328Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:00.332] [INFO] default - Response status: 401
+[2024-12-09T03:17:03.591] [INFO] default - [2024-12-08T20:17:03.591Z] POST /api/scrape
+[2024-12-09T03:17:03.593] [INFO] default - Response status: 401
+[2024-12-09T03:17:06.791] [INFO] default - [2024-12-08T20:17:06.791Z] POST /api/scrape
+[2024-12-09T03:17:06.793] [INFO] default - Response status: 401
+[2024-12-09T03:17:20.323] [INFO] default - [2024-12-08T20:17:20.323Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:20.327] [INFO] default - Response status: 401
+[2024-12-09T03:17:20.330] [INFO] default - [2024-12-08T20:17:20.330Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:20.333] [INFO] default - Response status: 401
+[2024-12-09T03:17:20.882] [INFO] default - [2024-12-08T20:17:20.882Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:20.884] [INFO] default - Response status: 401
+[2024-12-09T03:17:22.108] [INFO] default - [2024-12-08T20:17:22.108Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:22.112] [INFO] default - Response status: 401
+[2024-12-09T03:17:25.350] [INFO] default - [2024-12-08T20:17:25.350Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:25.352] [INFO] default - Response status: 401
+[2024-12-09T03:17:25.676] [INFO] default - [2024-12-08T20:17:25.676Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:25.678] [INFO] default - Response status: 401
+[2024-12-09T03:17:25.834] [INFO] default - [2024-12-08T20:17:25.834Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:25.837] [INFO] default - Response status: 401
+[2024-12-09T03:17:25.978] [INFO] default - [2024-12-08T20:17:25.978Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:25.980] [INFO] default - Response status: 401
+[2024-12-09T03:17:26.145] [INFO] default - [2024-12-08T20:17:26.145Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:26.147] [INFO] default - Response status: 401
+[2024-12-09T03:17:26.297] [INFO] default - [2024-12-08T20:17:26.297Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:26.300] [INFO] default - Response status: 401
+[2024-12-09T03:17:26.444] [INFO] default - [2024-12-08T20:17:26.444Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:26.447] [INFO] default - Response status: 401
+[2024-12-09T03:17:26.589] [INFO] default - [2024-12-08T20:17:26.588Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:26.591] [INFO] default - Response status: 401
+[2024-12-09T03:17:26.733] [INFO] default - [2024-12-08T20:17:26.733Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:26.735] [INFO] default - Response status: 401
+[2024-12-09T03:17:26.912] [INFO] default - [2024-12-08T20:17:26.912Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:26.915] [INFO] default - Response status: 401
+[2024-12-09T03:17:27.036] [INFO] default - [2024-12-08T20:17:27.036Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:27.039] [INFO] default - Response status: 401
+[2024-12-09T03:17:27.207] [INFO] default - [2024-12-08T20:17:27.206Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:27.208] [INFO] default - Response status: 401
+[2024-12-09T03:17:27.334] [INFO] default - [2024-12-08T20:17:27.334Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:27.336] [INFO] default - Response status: 401
+[2024-12-09T03:17:27.476] [INFO] default - [2024-12-08T20:17:27.476Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:27.478] [INFO] default - Response status: 401
+[2024-12-09T03:17:27.827] [INFO] default - [2024-12-08T20:17:27.827Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:27.829] [INFO] default - Response status: 401
+[2024-12-09T03:17:27.981] [INFO] default - [2024-12-08T20:17:27.981Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:27.983] [INFO] default - Response status: 401
+[2024-12-09T03:17:28.140] [INFO] default - [2024-12-08T20:17:28.140Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:28.142] [INFO] default - Response status: 401
+[2024-12-09T03:17:28.574] [INFO] default - [2024-12-08T20:17:28.574Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:28.576] [INFO] default - Response status: 401
+[2024-12-09T03:17:28.699] [INFO] default - [2024-12-08T20:17:28.699Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:28.701] [INFO] default - Response status: 401
+[2024-12-09T03:17:28.850] [INFO] default - [2024-12-08T20:17:28.850Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:28.852] [INFO] default - Response status: 401
+[2024-12-09T03:17:33.473] [INFO] default - [2024-12-08T20:17:33.473Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:33.475] [INFO] default - Response status: 401
+[2024-12-09T03:17:33.480] [INFO] default - [2024-12-08T20:17:33.480Z] GET /api/urls?page=1&limit=15
+[2024-12-09T03:17:33.482] [INFO] default - Response status: 401

@@ -1,0 +1,17 @@
+{
+  "development": {
+    "url": "postgresql://tonyle:password@db:5432/mydb",
+    "dialect": "postgres"
+  },
+  "test": {
+    "url": "postgresql://tonyle:password@db:5432/mydb",
+    "dialect": "postgres"
+  },
+  "production": {
+   "url": "postgresql://tonyle:password@db:5432/mydb",
+    "dialect": "postgres"
+  },
+  "jwt":{
+    "key" : "tonyle"
+  }
+}
