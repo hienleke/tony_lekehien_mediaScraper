@@ -12,7 +12,9 @@
   padding: 20px;
   border-radius: 5px;
 }
-
+.App-header h1{
+  text-align: center;
+}
 /* Table styles */
 table {
   width: 80%;

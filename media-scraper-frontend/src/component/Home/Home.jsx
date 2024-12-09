@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import moment from "moment";
-import Detail from "../Detail/Detail";
+import Detail from "./Detail/Detail";
+import Medias from "./Medias/Medias"
 import "./Home.css";
+import axiosInstance from '../../config/axiosInstance'
 const Home = () => {
 	const [urlList, setUrlList] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPages, setTotalPage] = useState(1);
 	const [loading_scrape, setLoading_scrape] = useState(false);
 	const [loading_refesh, setLoading_refresh] = useState(false);
-	const [currentDetailURL, setcurrentDetailURL] = useState(null);
+	const [currentDetailURL_id, setcurrentDetailURL_id] = useState(null);
 	const [url, setUrl] = useState("");
 	const itemsPerPage = 15;
+	const navigate = useNavigate();
 
 	const getUrls = async () => {
 		setLoading_refresh(true);
-		axios.get(`http://localhost:3001/api/urls`, {
+		axiosInstance.get(`/api/urls`, {
 			params: {
 				page: currentPage,
 				limit: itemsPerPage,
@@ -31,6 +33,7 @@ const Home = () => {
 			.catch((error) => {
 				console.error("There was an error fetching the data:", error);
 				setLoading_refresh(false);
+				navigate('/login');
 			});
 	};
 
@@ -39,8 +42,8 @@ const Home = () => {
 		setLoading_scrape(true);
 
 		try {
-			const response = await axios.post("http://localhost:3001/api/scrape", {
-				urls: [url],
+			const response = await axiosInstance.post("/api/scrape", {
+				urls: url.split(',').map(item => item.trim()),
 			});
 
 			const new_urls = Object.values(response.data.result)
@@ -54,7 +57,6 @@ const Home = () => {
 
 			if (response.status == 200) {
 				urlList.data = [...new_urls, ...urlList.data];
-
 				setUrlList(urlList);
 				setUrl("");
 			}
@@ -80,16 +82,14 @@ const Home = () => {
 		}
 	};
 	const handleRowClick = (id) => {
-		setcurrentDetailURL(id);
+		setcurrentDetailURL_id(id);
 	};
 	return (
 		<div className="home-container">
 			<form onSubmit={handleSubmit} className="scrape-bar">
 				<input
-					type="url"
 					value={url}
 					onChange={(e) => setUrl(e.target.value)}
-					className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
 					placeholder="Enter URL (e.g., https://example.com)"
 					required
 				/>
@@ -100,7 +100,7 @@ const Home = () => {
 
 			<div className="main">
 				<div className="content">
-					<h1 className="text-2xl font-bold mb-4">Media Table</h1>
+					<h2 className="text-2xl font-bold mb-4">Media Table</h2>
 					<button onClick={handleRefeshPage} disabled={loading_refesh} className={`px-4 py-2 rounded-lg text-white ${loading_refesh ? "bg-gray-500" : "bg-blue-500 hover:bg-blue-600"}`}>
 						{loading_refesh ? "Loading" : "Refresh"}
 					</button>
@@ -141,9 +141,13 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="detail">
-					{currentDetailURL && <Detail detail_id={currentDetailURL} />}
+					{currentDetailURL_id && <Detail detail_id={currentDetailURL_id}  urlName = {urlList?.data.find(item => item.id === currentDetailURL_id)?.url }  />}
 				</div>
 			</div>
+			<div className="all_medias">
+				<h2>ALL MEDIA SCRAPE</h2>
+					<Medias></Medias>
+				</div>
 		</div>
 	);
 };

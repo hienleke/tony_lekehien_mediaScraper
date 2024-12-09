@@ -4,12 +4,9 @@ const config = require('../config/config.json')
 const sequelize = new Sequelize(config.development.url, {
     dialect: 'postgres',
     dialectOptions: {
-      ssl: {
-        require: true, // Ensure SSL is required
-        rejectUnauthorized: false, // Bỏ qua xác minh chứng chỉ SSL
-    },
+      ssl: false,
   },
-  logging: console.log, // Hiển thị log câu lệnh SQL
+  logging: console.log, 
 });
 
 sequelize.sync({ alter: true })

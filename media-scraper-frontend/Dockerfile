@@ -1,29 +1,23 @@
-# Frontend Dockerfile
+# Step 1: Use Node.js base image to build and run the React app
+FROM node:20
 
-# Step 1: Build the frontend app
-FROM node:16 AS build
-
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Copy package.json and package-lock.json to install dependencies first
+COPY package.json package-lock.json ./
 
-# Install dependencies
+# Install dependencies (this is done before copying the rest of the code)
 RUN npm install
 
-# Copy the source code
+# Copy the rest of the application code
 COPY . .
 
-# Build the React app for production
-RUN npm run build
+# Set the environment variable to change the default port for React app to 3000
+ENV PORT 3000
 
-# Step 2: Serve the app with a static file server
-FROM nginx:alpine
-
-# Copy the build output from the previous step
-COPY --from=build /app/build /usr/share/nginx/html
-
-# Expose port 3000 for the frontend
+# Expose port 3000 for the React app
 EXPOSE 3000
 
-CMD ["nginx", "-g", "daemon off;"]
+# Run the React app
+CMD ["npm", "start"]

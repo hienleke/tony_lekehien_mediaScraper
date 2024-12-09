@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 import './Detail.css'
+import axiosInstance from '../../../config/axiosInstance'
 
-const Detail = ({detail_id}) => {
+const Detail = ({detail_id , urlName}) => {
 	let { id } = useParams(null);
 	const [urls, setUrlData] = useState(null);
 	const [loading, setLoading] = useState(true);
@@ -11,7 +11,7 @@ const Detail = ({detail_id}) => {
 	useEffect(() => {
 		const fetchUrlData = async () => {
 			try {
-				const response = await axios.get(`http://localhost:3001/api/urls/${id || detail_id}`);
+				const response = await axiosInstance.get(`/api/urls/${id || detail_id}`);
 				setUrlData(response.data); // assuming the API returns a single URL object
 				setLoading(false);
 			} catch (error) {
@@ -29,7 +29,7 @@ const Detail = ({detail_id}) => {
 
 	return (
 		<div className="container">
-			<h1 className="text-2xl font-bold mb-4">URL Details</h1> {/* Title should be outside of map */}
+			<h1 className="text-2xl font-bold mb-4">URL Details  : {urlName || "not found"}</h1> {/* Title should be outside of map */}
       <h2>Image</h2>
       <div className="image-container">
         {urls.filter((url) => url.type === 'image').map((url) => {

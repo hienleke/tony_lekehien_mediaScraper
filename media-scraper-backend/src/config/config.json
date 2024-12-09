@@ -1,4 +1,8 @@
 {
+  "comment":{
+    "content" :"if  u want connect  from ur pc",
+    "url" : "postgresql://tonyle:password@localhost:5432/mydb"
+  },
   "development": {
     "url": "postgresql://tonyle:password@db:5432/mydb",
     "dialect": "postgres"

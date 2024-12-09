@@ -5,19 +5,18 @@ const ScrapedURL = require("../models/ScrapedURL");
 const Media = require("../models/Media");
 const puppeteer = require("puppeteer");
 const mediaService = require("../service/MediaService");
-const { chromium } = require("playwright");
+const {getBrowserInstance} = require("../service/ChormeService");
+
 let browser, page;
 
 const scrapeURLs = async (req, res) => {
-	if (!browser) browser = await puppeteer.launch({ headless: false });
+	if (!browser) browser = await getBrowserInstance();
 	if (!page) page = await browser.newPage();
 	const { urls } = req.body;
 	if (!urls || !Array.isArray(urls)) {
 		return res.status(400).json({ error: "Invalid URLs array in request body" });
 	}
 	let result = {};
-	let content;
-
 	for await (const url_item of urls) {
 		try {
 			let domain = new URL(url_item).origin;
@@ -31,12 +30,16 @@ const scrapeURLs = async (req, res) => {
 				imageUrls: [],
 				videoUrls: [],
 			};
-			await page.goto(url_item, { waitUntil: "load", timeout: 120000 });
-			await page.waitForNavigation({
-				waitUntil: 'networkidle0',
+			await page.goto(url_item, { waitUntil: "networkidle2", timeout: 120000 });		
+			await page.evaluate(() => {
+				return new Promise((resolve) => {
+				  if (document.readyState === 'complete') {
+					resolve(true);
+				  } else {
+					window.addEventListener('load', () => resolve(true));
+				  }
+				});
 			  });
-			
-			
 			const mediaSources = await page.evaluate((newScrapedURL) => {
 				let URL_scrape = {
 						id : newScrapedURL.id,

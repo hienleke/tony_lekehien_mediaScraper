@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Login.css";
-
-const Login = ({ setToken }) => {
+import {setAuthToken } from '../../config/axiosInstance'
+import { useNavigate } from 'react-router-dom';
+const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,8 +20,12 @@ const Login = ({ setToken }) => {
       });
 
       if (response.status === 200 && response.data.token) {
-        setToken(response.data.token); // Save token in parent state or context
-        localStorage.setItem("jwt", response.data.token); // Save token in localStorage
+        //setToken(response.data.token); 
+        localStorage.setItem("jwt", response.data.token);
+        setAuthToken(response.data.token);
+        
+        navigate('/home')
+        setError("");
       } else {
         setError("Invalid credentials");
       }

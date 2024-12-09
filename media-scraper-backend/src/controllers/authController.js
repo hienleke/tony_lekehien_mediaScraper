@@ -25,7 +25,7 @@ const login = async (req, res, next) => {
       expiresIn: "1h",
     });
 
-    res.json({ token });
+    res.json({ token , redirectUrl: '/home'});
   } catch (error) {
 
     logger.error("Error in login controller:", error);

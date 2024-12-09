@@ -1,83 +1,107 @@
-.home-container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 1%;
-    overflow-x: hidden;  /* Disable horizontal scrolling */
-  overflow-y: auto;
+.home-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 3%;
+	overflow-x: hidden; /* Disable horizontal scrolling */
+	overflow-y: auto;
 }
 
-.main{
-  display: flex;
-  width: 100%;
+h2{
+  text-align: center;
+}
+.main {
+	display: flex;
+	width: 100%;
 }
 .content {
- flex: 50%;
+	flex: 50%;
 }
 
-.detail{
- flex: 50%;
+.detail {
+	flex: 50%;
 }
 
 /* Định dạng bảng */
 .custom-table {
+	width: 100%;
+	border: 1px solid #d1d5db; /* Border màu xám nhạt */
+	border-collapse: collapse;
+	background-color: #fff; /* Nền trắng */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng mờ */
+	border-radius: 8px;
+	overflow: hidden; /* Giúp các góc tròn không bị cắt */
+}
+
+/* Định dạng phần đầu bảng */
+.custom-table-header {
+	background-color: #e5e7eb; /* Nền xám nhạt */
+	color: #4b5563; /* Màu chữ xám đậm */
+	text-transform: uppercase; /* Chữ in hoa */
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.custom-table-header th {
+	padding: 12px 16px; /* Khoảng cách trong ô */
+	text-align: left; /* Canh trái */
+}
+
+/* Định dạng phần thân bảng */
+.custom-table-body {
+	color: #374151; /* Màu chữ xám tối */
+	font-size: 14px;
+}
+
+/* Định dạng từng hàng trong bảng */
+.custom-table-row {
+	border-bottom: 1px solid #e5e7eb; /* Đường kẻ dưới mỗi hàng */
+	cursor: pointer; /* Con trỏ chỉ tay */
+}
+
+.custom-table-row:hover {
+	background-color: #f3f4f6; /* Nền xám nhạt khi hover */
+}
+
+/* Định dạng từng ô trong bảng */
+.custom-table-cell-left {
+	padding: 12px 16px; /* Khoảng cách trong ô */
+	text-align: left; /* Canh trái */
+}
+
+.custom-table-cell-center {
+	padding: 12px 16px;
+	text-align: center; /* Canh giữa */
+}
+
+/* Định dạng đường dẫn */
+.custom-table-cell-link a {
+	color: #2563eb; /* Màu xanh */
+	text-decoration: underline; /* Gạch dưới */
+}
+
+.custom-table-cell-link a:hover {
+	color: #1d4ed8; /* Xanh đậm hơn khi hover */
+}
+
+.scrape-bar {
+	width: 100%;
+	padding: 0.8rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1rem;
+	color: #333;
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+	min-width: 100%;
+}
+
+.scrape-bar input {
     width: 100%;
-    border: 1px solid #d1d5db; /* Border màu xám nhạt */
-    border-collapse: collapse;
-    background-color: #fff; /* Nền trắng */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng mờ */
-    border-radius: 8px;
-    overflow: hidden; /* Giúp các góc tròn không bị cắt */
-  }
-  
-  /* Định dạng phần đầu bảng */
-  .custom-table-header {
-    background-color: #e5e7eb; /* Nền xám nhạt */
-    color: #4b5563; /* Màu chữ xám đậm */
-    text-transform: uppercase; /* Chữ in hoa */
-    font-size: 14px;
-    font-weight: 600;
-  }
-  
-  .custom-table-header th {
-    padding: 12px 16px; /* Khoảng cách trong ô */
-    text-align: left; /* Canh trái */
-  }
-  
-  /* Định dạng phần thân bảng */
-  .custom-table-body {
-    color: #374151; /* Màu chữ xám tối */
-    font-size: 14px;
-  }
-  
-  /* Định dạng từng hàng trong bảng */
-  .custom-table-row {
-    border-bottom: 1px solid #e5e7eb; /* Đường kẻ dưới mỗi hàng */
-    cursor: pointer; /* Con trỏ chỉ tay */
-  }
-  
-  .custom-table-row:hover {
-    background-color: #f3f4f6; /* Nền xám nhạt khi hover */
-  }
-  
-  /* Định dạng từng ô trong bảng */
-  .custom-table-cell-left {
-    padding: 12px 16px; /* Khoảng cách trong ô */
-    text-align: left; /* Canh trái */
-  }
-  
-  .custom-table-cell-center {
-    padding: 12px 16px;
-    text-align: center; /* Canh giữa */
-  }
-  
-  /* Định dạng đường dẫn */
-  .custom-table-cell-link a {
-    color: #2563eb; /* Màu xanh */
-    text-decoration: underline; /* Gạch dưới */
-  }
-  
-  .custom-table-cell-link a:hover {
-    color: #1d4ed8; /* Xanh đậm hơn khi hover */
-  }
-  
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+}

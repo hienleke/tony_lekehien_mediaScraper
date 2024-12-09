@@ -4,7 +4,6 @@
     flex-direction: column;   
     height: 100vh;
     align-items: center;
-    overflow: scroll;
 }
   
 .image-container, .video-container {
@@ -13,14 +12,19 @@
     flex-wrap: wrap;
     gap: 20px;  
     align-items: center;
-    overflow: scroll;
+    overflow-y: scroll;
     height: 50%;
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Spacing inside the container */
+    background-color: #f9f9f9; /* Background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
   
 
 .image-item, .video-item {
     border: 2px solid #5a6670;
-    flex: 1 1 calc(10% - 20px);
+    flex: 1 1 calc(30% - 5px);
     border-radius: 0.375rem; 
     display: flex; 
     justify-content: center; 
