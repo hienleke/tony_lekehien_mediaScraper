@@ -38,8 +38,7 @@ docker-compose up -d
 
 This will start both the backend and frontend containers.
 ### Features
-UI-flow
-         go to    http://localhost:3000/              with user_name  : 'admin'  password : 'password'
+  Main ui  ->    http://localhost:3000/              with user_name  : 'admin'  password : 'password'
 
     API Test Example
     After running the server, you can test the scraper API by sending a POST request to the following endpoint:
@@ -84,6 +83,8 @@ UI-flow
 
     Solution
         Internal Queue and Worker Model
+        Since scraping requires using Puppeteer running as a Chrome mini inside Docker and also with Docker Backend  and postgres database, this can load the system. Therefore, external queues like Redis, Kafka, or RabbitMQ should not be used, as they would increase              complexity and consume more resources.
+         While cloud services could optimize this, it's not the current solution approach, so I choose to use a small internal queue within the code to handle the tasks. This internal queue will control the number of URLs processed at a time, reducing system load and            ensuring tasks are performed sequentially without overloading resources
         To efficiently manage this task, an internal queue system can be implemented to manage the URLs. This approach helps avoid overwhelming the system by processing smaller batches of URLs rather than scraping all 5000 URLs simultaneously.
 
     Worker Pool
