@@ -10,84 +10,97 @@ const {getBrowserInstance} = require("../service/ChormeService");
 let browser, page;
 
 const scrapeURLs = async (req, res) => {
-	if (!browser) browser = await getBrowserInstance();
-	if (!page) page = await browser.newPage();
-	const { urls } = req.body;
-	if (!urls || !Array.isArray(urls)) {
-		return res.status(400).json({ error: "Invalid URLs array in request body" });
-	}
-	let result = {};
-	for await (const url_item of urls) {
-		try {
-			let domain = new URL(url_item).origin;
-			let newScrapedURL = await ScrapedURL.findOne({ where: { url: url_item } });
-			if (!newScrapedURL) newScrapedURL = await ScrapedURL.create({ url: url_item });
-			let URL_scrape = {
-				id: newScrapedURL.id,
-				url: newScrapedURL.url,
-				createdAt: newScrapedURL.createdAt,
-				updatedAt: newScrapedURL.updatedAt,
-				imageUrls: [],
-				videoUrls: [],
-			};
-			await page.goto(url_item, { waitUntil: "networkidle2", timeout: 120000 });		
-			await page.evaluate(() => {
-				return new Promise((resolve) => {
-				  if (document.readyState === 'complete') {
-					resolve(true);
-				  } else {
-					window.addEventListener('load', () => resolve(true));
-				  }
-				});
-			  });
-			const mediaSources = await page.evaluate((newScrapedURL) => {
-				let URL_scrape = {
-						id : newScrapedURL.id,
-						imageUrls : [],
-						videoUrls : []
-					}
-					let mediaItems = []
-					const mediaElements = document.querySelectorAll("img, video");
+    if (!browser) browser = await getBrowserInstance();
+    const { urls } = req.body;
 
-					mediaElements.forEach((element, index) => {
-						let mediaUrl = element.src;
-						if (mediaUrl != "" && mediaUrl ) {
-							if (element.tagName.toLowerCase() === "img") {
-								URL_scrape.imageUrls.push(mediaUrl);
-								mediaItems.push({
-									type: "image",
-									url: mediaUrl,
-									urlId: URL_scrape.id,
-								});
-							} else if (element.tagName.toLowerCase() === "video") {
-								URL_scrape.videoUrls.push(mediaUrl);
-								mediaItems.push({
-									type: "video",
-									url: mediaUrl,
-									urlId: URL_scrape.id,
-								});
-							}
-						}
-					});
-					return { URL_scrape, mediaItems };
-				},newScrapedURL
-			);
-			URL_scrape.imageUrls = mediaSources.URL_scrape.imageUrls;
-			URL_scrape.videoUrls = mediaSources.URL_scrape.videoUrls;
-			Media.bulkCreate(mediaSources.mediaItems)
-				.then(() => {
-					console.log("Media items have been added successfully.");
-				})
-				.catch((error) => {
-					logger.error("Error occurred while creating media items: ", error);
-				});
-			result[url_item] = URL_scrape;
-		} catch (error) {
-			logger.error("Error during scraping: ", error);
-			result[url_item] = error;
-		}
-	}
-	res.status(200).json({ result });
+    if (!urls || !Array.isArray(urls)) {
+        return res.status(400).json({ error: 'Invalid URLs array in request body' });
+    }
+
+    const MAX_CONCURRENT_WORKERS = 10; // Number of concurrent workers
+    const result = {};
+    const queue = [...new Set(urls)]; // Internal queue of URLs
+
+    // Function to process a single URL
+    const processURL = async (url) => {
+        try {
+            const page = await browser.newPage();
+            let domain = new URL(url).origin;
+            let newScrapedURL = await ScrapedURL.findOne({ where: { url } });
+
+            if (!newScrapedURL) newScrapedURL = await ScrapedURL.create({ url });
+
+            let URL_scrape = {
+                id: newScrapedURL.id,
+                url: newScrapedURL.url,
+                createdAt: newScrapedURL.createdAt,
+                updatedAt: newScrapedURL.updatedAt,
+                imageUrls: [],
+                videoUrls: [],
+            };
+
+            await page.goto(url, { waitUntil: 'load', timeout: 60000 });
+
+            const mediaSources = await page.evaluate((scrapeData) => {
+                const { id } = scrapeData;
+                let URL_scrape = {
+                    id,
+                    imageUrls: [],
+                    videoUrls: [],
+                };
+
+                const mediaItems = [];
+                const mediaElements = document.querySelectorAll('img, video');
+                mediaElements.forEach((element) => {
+                    const mediaUrl = element.src;
+                    if (mediaUrl) {
+                        if (element.tagName.toLowerCase() === 'img') {
+                            URL_scrape.imageUrls.push(mediaUrl);
+                            mediaItems.push({ type: 'image', url: mediaUrl, urlId: id });
+                        } else if (element.tagName.toLowerCase() === 'video') {
+                            URL_scrape.videoUrls.push(mediaUrl);
+                            mediaItems.push({ type: 'video', url: mediaUrl, urlId: id });
+                        }
+                    }
+                });
+
+                return { URL_scrape, mediaItems };
+            }, { id: newScrapedURL.id });
+
+            URL_scrape.imageUrls = mediaSources.URL_scrape.imageUrls;
+            URL_scrape.videoUrls = mediaSources.URL_scrape.videoUrls;
+
+            await Media.bulkCreate(mediaSources.mediaItems);
+
+            await page.close();
+
+            return { success: true, data: URL_scrape };
+        } catch (error) {
+			logger.error("Error in login controller:", error);
+            return { success: false, error: error.message };
+        }
+    };
+
+    // Process URLs in batches
+    while (queue.length > 0) {
+        const batch = queue.splice(0, MAX_CONCURRENT_WORKERS); // Take a batch of URLs
+        const promises = batch.map((url) => processURL(url)); // Create promises for the batch
+
+        // Wait for all promises to settle
+        const results = await Promise.allSettled(promises);
+
+        // Collect results
+        results.forEach((result, index) => {
+            const url = batch[index];
+            if (result.status === 'fulfilled') {
+                result[url] = result.value;
+            } else {
+                result[url] = { success: false, error: result.reason };
+            }
+        });
+    }
+
+    res.status(200).json({ result });
 };
 
 module.exports = { scrapeURLs };
