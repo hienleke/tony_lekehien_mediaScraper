@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import axiosInstance from '../../config/axiosInstance'
 import "./Login.css";
 import {setAuthToken } from '../../config/axiosInstance'
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +14,7 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:3001/api/login", {
+      const response = await axiosInstance.post("/api/login", {
         username,
         password,
       });
