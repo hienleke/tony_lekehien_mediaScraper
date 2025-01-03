@@ -10,7 +10,8 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors({
-    origin: 'http://localhost:3000', // Replace with the actual URL of your frontend
+    origin: ['http://localhost:3000',
+    'https://lekehien-mediascraper.onrender.com',]
   }));
 app.use(express.json())
 
