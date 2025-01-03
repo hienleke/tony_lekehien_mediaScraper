@@ -39,7 +39,7 @@ const scrapeURLs = async (req, res) => {
                 videoUrls: [],
             };
 
-            await page.goto(url, { waitUntil: 'load', timeout: 60000 });
+            await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
 
             const mediaSources = await page.evaluate((scrapeData) => {
                 const { id } = scrapeData;
