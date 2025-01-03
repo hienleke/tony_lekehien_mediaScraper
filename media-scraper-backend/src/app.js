@@ -11,7 +11,7 @@ const cors = require('cors');
 const app = express();
 app.use(cors({
     origin: ['http://localhost:3000',
-    'https://lekehien-mediascraper.onrender.com',]
+    'https://lekehien-mediascraper.onrender.com']
   }));
 app.use(express.json())
 
