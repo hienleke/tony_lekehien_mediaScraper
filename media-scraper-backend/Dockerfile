@@ -30,8 +30,9 @@ RUN apt-get update && apt-get install -y \
 # Set the working directory for the backend
 WORKDIR /app
 
+RUN ls -la /
 # Copy package.json and package-lock.json to install dependencies
-COPY package.json./ 
+COPY package.json package-lock.json ./ 
 
 # Install dependencies
 RUN npm install
