@@ -11,8 +11,12 @@ const cors = require('cors');
 const app = express();
 app.use(cors({
     origin: ['http://localhost:3000',
-    'https://lekehien-mediascraper.onrender.com']
-  }));
+        'https://lekehien-mediascraper.onrender.com'],
+        methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed HTTP methods
+        allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'], // Allowed headers
+        credentials: true // Allow cookies and credentials to be sent
+}));
+app.options('*', cors());
 app.use(express.json())
 
 app.use(loggerMiddleware);
