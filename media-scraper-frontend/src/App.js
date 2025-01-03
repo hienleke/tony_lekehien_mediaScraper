@@ -8,7 +8,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1>scraped_urls email: lekehien5431@gmail.com  phone:  +84762110602</h1>
+          <h1 style={{textAlign: "center"}}>scraped_urls email: lekehien5431@gmail.com</h1>
         </header>
 
         {/* Define Routes for Home and Detail components */}
