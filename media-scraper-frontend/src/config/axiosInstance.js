@@ -4,7 +4,12 @@ import axios from 'axios';
 
 
 const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL||'http://localhost:3001', // replace with your server base URL
+  baseURL: process.env.REACT_APP_API_BASE_URL || 'http://localhost:3001', 
+  headers: {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*', // Allow all origins or specify the domain if needed
+  },
+  withCredentials: true, 
 });
 
 
