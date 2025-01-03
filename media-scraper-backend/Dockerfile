@@ -28,7 +28,7 @@ RUN apt-get update && apt-get install -y \
     --no-install-recommends
 
 # Set the working directory for the backend
-WORKDIR /app
+#WORKDIR /app
 
 # Copy package.json and package-lock.json to install dependencies
 COPY package.json package-lock.json ./ 
