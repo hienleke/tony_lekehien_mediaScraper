@@ -5,7 +5,7 @@ const ScrapedURL = require("../models/ScrapedURL");
 const Media = require("../models/Media");
 const puppeteer = require("puppeteer");
 const mediaService = require("../service/MediaService");
-const {getBrowserInstance} = require("../service/ChormeService");
+const {getBrowserInstance , closeBrowser} = require("../service/ChormeService");
 
 let browser, page;
 
@@ -76,7 +76,8 @@ const scrapeURLs = async (req, res) => {
 
             return { success: true, data: URL_scrape };
         } catch (error) {
-			logger.error("Error in login controller:", error);
+            logger.error("Error in pupperteer controller:", error);
+            await closeBrowser();
             return { success: false, error: error.message };
         }
     };
