@@ -10,7 +10,7 @@ const {getBrowserInstance , closeBrowser} = require("../service/ChormeService");
 let browser, page;
 
 const scrapeURLs = async (req, res) => {
-    if (!browser) browser = await getBrowserInstance();
+    browser = await getBrowserInstance();
     const { urls } = req.body;
 
     if (!urls || !Array.isArray(urls)) {
@@ -39,7 +39,7 @@ const scrapeURLs = async (req, res) => {
                 videoUrls: [],
             };
 
-            await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
+            await page.goto(url, { waitUntil: 'networkidle0', timeout: 10000 });
 
             const mediaSources = await page.evaluate((scrapeData) => {
                 const { id } = scrapeData;
