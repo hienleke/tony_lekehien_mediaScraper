@@ -92,7 +92,7 @@ const MediaComponent = () => {
                 Your browser does not support the video tag.
               </video>
                 )}
-                <div class="media-item-description">
+                <div className="media-item-description">
                     <a href={item.url} target="_blank" >{item.url}</a>
                     </div>
           </div>
