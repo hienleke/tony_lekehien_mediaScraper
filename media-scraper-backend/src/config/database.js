@@ -11,7 +11,9 @@ const sequelize = new Sequelize(process.env.databaseURL || config.development.ur
   },
   logging: console.log,
 });
-
+console.log("asdfdas   :",   process.env.SSL_CA_PATH);
+const sslCaContent = fs.readFileSync(sslCaPath).toString();
+console.log(" data 1  2 43 :",sslCaContent)
 sequelize.sync({ alter: true })
   .then(() => {
     console.log('Database synced successfully');
