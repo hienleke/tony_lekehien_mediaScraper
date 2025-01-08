@@ -6,12 +6,11 @@ const sequelize = new Sequelize(process.env.databaseURL || config.development.ur
   dialect: 'postgres',
   dialectOptions: {
     ssl: {
-      ca: sslCaContent,
       require: true,
-      rejectUnauthorized: false,
+      rejectUnauthorized: false, // Skips SSL validation (use in development only)
     },
   },
-  logging: console.log,
+  logging: console.log, // Optional: Logs queries for debugging
 });
 sequelize.sync({ alter: true })
   .then(() => {
