@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize');
 const config = require('../config/config.json')
-
+const fs = require('fs');
 const sequelize = new Sequelize(process.env.databaseURL || config.development.url, {
   dialect: 'postgres',
   dialectOptions: {
