@@ -7,7 +7,8 @@ const sequelize = new Sequelize(process.env.databaseURL || config.development.ur
   dialectOptions: {
     ssl: {
       ca: sslCaContent,
-      rejectUnauthorized: true,  // Ensure that the certificate is validated
+      require: true,
+      rejectUnauthorized: false,
     },
   },
   logging: console.log,
